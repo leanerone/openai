@@ -1,0 +1,10 @@
+{
+  "internal-model-name": {
+    "name": "Internal Model",
+    "contextWindow": 128000,
+    "experimental": false,
+    "supportsImages": true,
+    "supportsToolUse": true,
+    "enabled": true
+  }
+}

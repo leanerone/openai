@@ -1,0 +1,22 @@
+# ============================================
+# Codex 配置 - 把这段加到 ~/.codex/config.toml
+# (或者整体替换,看你的情况)
+# ============================================
+
+# 这里的 model 必须跟 .env 里的 UPSTREAM_MODEL 完全一致
+model = "internal-model-name"
+model_provider = "internal-proxy"
+wire_api = "responses"
+
+[model_providers.internal-proxy]
+name = "Internal LLM via Proxy"
+base_url = "http://127.0.0.1:8000/v1"
+
+# 这里的值随便填,代理会忽略,真实 key 在 .env 里
+env_key = "OPENAI_API_KEY"
+
+[model_providers.internal-proxy.env]
+OPENAI_API_KEY = "proxy-handles-auth"
+
+# 可选:请求超时
+# request_timeout_secs = 300
