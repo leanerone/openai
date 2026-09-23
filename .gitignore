@@ -1,0 +1,38 @@
+﻿# Secrets - NEVER commit
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+service-stdout.log
+service-stderr.log
+proxy.log
+requests.log
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Wheels
+wheels/
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Service
+*.pid
